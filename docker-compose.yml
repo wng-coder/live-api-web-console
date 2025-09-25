@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "13000:13000"
+    environment:
+      - NODE_ENV=production
+      - PORT=13000
+    restart: unless-stopped
+    # Uncomment if you want to mount local code for live development
+    # volumes:
+    #   - .:/app
